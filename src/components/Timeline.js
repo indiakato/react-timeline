@@ -3,17 +3,17 @@ import './Timeline.css';
 import TimelineEvent from './TimelineEvent';
 
 const Timeline = (props) => {
-  const timelineEvents = props.events.map((event, i) => {
+  const timelineComponents = props.events.map((event, i) => {
     return (
       <li key = {i}>
-        < timelineEvent person = {event.person}
+        < TimelineEvent person = {event.person}
                         status = {event.status}
                         timeStamp = {event.timeStamp} />
       </li>
     )
   })
   return (
-    <ul>{timelineEvents}</ul>
+    <ul>{timelineComponents}</ul>
   )
 }
 
